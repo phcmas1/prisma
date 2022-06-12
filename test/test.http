@@ -1,0 +1,41 @@
+@base = http://localhost:4444
+
+### Get Books
+GET {{base}}/books
+
+### Get A Book By Id
+GET {{base}}/books/2
+
+
+### Create Book
+POST {{base}}/books
+Content-Type: application/json
+
+{
+    "title": "Harry Potter 5",
+    "authorId": 1
+}
+
+
+### Update Book By Id
+PATCH  {{base}}/books/2
+Content-Type: application/json
+
+{
+    "title": "Harry Potter 2-2"
+}
+
+### Delete Book By Id
+DELETE  {{base}}/books/1
+
+
+### Get Authors
+GET {{base}}/authors
+
+### Create Author
+POST {{base}}/authors
+Content-Type: application/json
+
+{
+    "name": "JK"
+}
